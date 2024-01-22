@@ -1,0 +1,317 @@
+:root {
+  --brand-color: 67, 37, 83;
+  --very-pale-pink: 245, 227, 224;
+  --pale-pink: 232, 180, 188;
+  --pink: 210, 130, 166;
+  --dark-purple: 34, 19, 42;
+  --mint: 81, 163, 163;
+}
+html {
+  height: 100%;
+}
+body {
+  margin: 0px 0px;
+  height: 100%;
+}
+.page-container {
+  width: 100%;
+  height: 1100px;
+  display: grid;
+  grid-template-areas:
+    "page-background"
+    "footer";
+  background-color: rgb(var(--brand-color));
+  grid-template-rows: 4fr 1fr;
+}
+.page-background {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main";
+  grid-template-rows: 1fr 4fr;
+  grid-area: page-background;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(var(--pale-pink), 0.45),
+      rgba(var(--pale-pink), 1)
+    ),
+    url(background_image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Header */
+
+header {
+  grid-area: header;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/* header .logo {
+  width: 230px;
+  height: 80px;
+  margin-top: 10px;
+  background-position: center;
+  background-image: url(logo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+.header-container {
+  display: grid;
+  grid-template: 1fr/ 1fr 1fr;
+  width: 1000px;
+  height: 157px;
+  margin-top: 22px;
+}
+
+/* Player Panel */
+
+.player-panel {
+  position: relative;
+  width: calc(100% - 2px);
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 83px);
+  grid-template-areas:
+    ". tl tl tl tl tl"
+    "ml ml ml ml ml ads"
+    "ml ml ml ml ml ads"
+    "tr bl bl bl bl popularity"
+    "tr bl bl bl bl popularity";
+}
+.avatar {
+  position: absolute;
+  left: -9px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+.avatar img {
+  height: 100px;
+  width: 100px;
+}
+.level {
+  position: absolute;
+  color: rgb(var(--very-pale-pink));
+  left: 33px;
+  top: -9px;
+}
+.star {
+  position: absolute;
+  left: 21px;
+  top: -18px;
+}
+.star img {
+  height: 32px;
+  width: 32px;
+}
+.top-level {
+  grid-area: tl;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-content: end;
+}
+.top-level-icons,
+.player-name {
+  margin: 0px 15px;
+  font-family: "Lobster", fantasy;
+  font-size: 19px;
+}
+.top-level-icons a {
+  margin: 0 5px;
+}
+.top-level-icons a .settings,
+.top-level-icons a .mail {
+  opacity: 0.8;
+}
+.mid-level {
+  grid-area: ml;
+  border-radius: 30px;
+}
+.bottom-level {
+  grid-area: bl;
+  border-radius: 30px;
+}
+.trophy {
+  grid-area: tr;
+}
+.ads {
+  grid-area: ads;
+}
+.popularity {
+  grid-area: popularity;
+}
+.trophy,
+.ads,
+.popularity,
+.avatar,
+.mid-level,
+.bottom-level {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.accent {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+}
+.bar {
+  height: 45px;
+  width: 100%;
+  border-radius: 30px;
+}
+.bar,
+.accent {
+  background-color: rgba(var(--brand-color), 0.5);
+  box-shadow: 3px 5px 4px rgba(var(--pale-pink), 0.5) inset;
+}
+
+/* Navigation */
+
+.nav {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-content: center;
+}
+.nav-background {
+  width: 83px;
+  height: 83px;
+  background: url(header-main-menu.png), no-repeat;
+}
+.home,
+.city,
+.arena,
+.clubs,
+.ranking,
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Lobster", fantasy;
+  font-size: 19px;
+}
+.home-image {
+  background-position: -2px -5px;
+}
+.city-image {
+  background-position: -92px -4px;
+}
+.arena-image {
+  background-position: -189px -4px;
+}
+.clubs-image {
+  background-position: -289px -4px;
+}
+.ranking-image {
+  background-position: -379px -5px;
+}
+.events-image {
+  background-position: -92px -4px;
+}
+
+/* Main Content */
+
+main {
+  grid-area: main;
+  height: auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-container {
+  display: grid;
+  height: 500px;
+  width: 1000px;
+  grid-template: 1fr/ 1fr 1fr;
+}
+
+/* Game Containers */
+
+.cards-wrapper,
+.gifts-wrapper {
+  height: 500px;
+  width: 480px;
+  margin: 0px 10px;
+  border-radius: 30px;
+  background-color: rgba(var(--brand-color), 0.5);
+  box-shadow: 0 0 20px rgba(var(--pale-pink)) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gifts-container,
+.cards-container {
+  height: 470px;
+  width: 450px;
+  border-radius: 30px;
+  background-color: rgba(var(--brand-color), 0.5);
+  box-shadow: 0 0 20px rgba(var(--dark-purple)) inset;
+}
+.cards-container {
+  height: 300px;
+  width: 450px;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+}
+.game-instruction-text,
+.game-nav,
+.reset-text,
+.button-wrapper,
+.gifts-header-text,
+.gifts-footer-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game-instruction-text,
+.gifts-header-text {
+  font-family: "Lobster", fantasy;
+  font-size: 22px;
+  color: rgb(var(--very-pale-pink));
+}
+.cards-row,
+.clothes-row {
+  margin: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(var(--mint));
+}
+.gifts-container {
+  height: 300px;
+  width: 450px;
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+}
+.gifts {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.clothes {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-direction: column;
+}
+.clothes-item,
+.hair {
+  width: 70px;
+  height: 70px;
+  background-color: rgb(var(--mint));
+}
+footer {
+  height: auto;
+}
