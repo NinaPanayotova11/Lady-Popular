@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="page-container">
@@ -40,7 +44,32 @@
                 </span>
               </div>
               <div class="mid-level">
-                <div class="bar"></div>
+                <div class="bar">
+                  <div class="menu-item">
+                    <div class="menu-icon currency dollars"></div>
+                    <span class="menu-text">56</span>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-icon currency emeralds"></div>
+                    <span class="menu-text">45</span>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-icon currency diamonds"></div>
+                    <span class="menu-text">2</span>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-icon">
+                      <img width="25px" height="25px" src="orange-energy.svg" />
+                    </div>
+                    <span class="menu-text">10</span>
+                  </div>
+                  <div class="menu-item">
+                    <div class="menu-icon">
+                      <img width="25px" height="25px" src="blue-energy.svg" />
+                    </div>
+                    <span class="menu-text">4</span>
+                  </div>
+                </div>
               </div>
               <div class="ads">
                 <div class="accent"></div>
@@ -49,10 +78,25 @@
                 <div class="accent"></div>
               </div>
               <div class="bottom-level">
-                <div class="bar"></div>
+                <div class="bar">
+                  <div class="menu-item">
+                    <span class="menu-icon bottom-icon vip"></span>
+                  </div>
+                  <div class="menu-item">
+                    <span class="menu-icon bottom-icon wheel"></span>
+                  </div>
+                  <div class="menu-item">
+                    <span class="menu-icon bottom-icon list"></span>
+                  </div>
+                  <div class="menu-item">
+                    <span class="menu-icon bottom-icon chest"></span>
+                  </div>
+                </div>
               </div>
               <div class="popularity">
-                <div class="accent"></div>
+                <div class="accent">
+                  <img width="25px" height="25px" src="rising.svg" />
+                </div>
               </div>
             </div>
             <div class="nav">
@@ -84,39 +128,69 @@
           </div>
         </header>
         <main>
+          <div class="game-heading-wrapper">
+            <div class="game-heading"><span>Ancient Sands</span></div>
+          </div>
           <div class="main-container">
             <div class="cards-wrapper">
               <div class="game-instruction-text">
                 <span> Open 3 matching tiles and you win the item!</span>
               </div>
-              <div class="cards-container">
+              <div class="cards-container game-container">
                 <div class="game-nav">
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="current grid-icon"> </span>
                   <img width="20px" height="20px" src="arrow.svg" />
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="locked grid-icon"> </span>
                   <img width="20px" height="20px" src="arrow.svg" />
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="locked grid-icon"> </span>
                   <img width="20px" height="20px" src="arrow.svg" />
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="locked grid-icon"> </span>
                   <img width="20px" height="20px" src="arrow.svg" />
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="locked grid-icon"> </span>
                   <img width="20px" height="20px" src="arrow.svg" />
-                  <img width="20px" height="20px" src="grid.svg" />
+                  <span class="locked grid-icon"> </span>
                 </div>
                 <div class="cards-row">
-                  <div class="card"></div>
-                  <div class="card"></div>
-                  <div class="card"></div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
                 </div>
                 <div class="cards-row">
-                  <div class="card"></div>
-                  <div class="card"></div>
-                  <div class="card"></div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
                 </div>
                 <div class="cards-row">
-                  <div class="card"></div>
-                  <div class="card"></div>
-                  <div class="card"></div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
+                  <div class="card">
+                    <span class="card-gem"></span>
+                    <span class="card-price">1</span>
+                  </div>
                 </div>
               </div>
               <div class="reset-text">
@@ -126,31 +200,87 @@
                 >
               </div>
               <div class="button-wrapper">
-                <button>Reset!</button>
+                <button class="reset-btn">
+                  <div class="btn-gem"></div>
+                  Reset now
+                </button>
               </div>
             </div>
             <div class="gifts-wrapper">
               <div class="gifts-header-text">
                 <span>Win dollars, emeralds and unique rewards!</span>
               </div>
-              <div class="gifts-container">
+              <div class="gifts-container game-container">
                 <div class="gifts">
                   <div class="clothes">
                     <div class="clothes-row">
-                      <div class="clothes-item"></div>
-                      <div class="clothes-item"></div>
-                      <div class="clothes-item"></div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item first"></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item second"></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item third"></div>
+                        </div>
+                      </div>
                     </div>
                     <div class="clothes-row">
-                      <div class="clothes-item"></div>
-                      <div class="clothes-item"></div>
-                      <div class="clothes-item"></div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item fourth"></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item fifth"></div>
+                        </div>
+                      </div>
+                      <div class="card">
+                        <div class="item-wrapper">
+                          <div class="clothes-item-price">
+                            <div class="currency coins"></div>
+                            190
+                          </div>
+                          <div class="clothes-item sixth"></div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  <div class="hair"></div>
+                  <div class="card">
+                    <div class="item-wrapper">
+                      <div class="hair-label">0/2</div>
+                      <div class="hair"></div>
+                    </div>
+                  </div>
                 </div>
-                <div class="button-wrapper">
-                  <button>View outfit</button>
+                <div class="button-wrapper view-btn-wrapper">
+                  <button class="view-btn">View outfit</button>
                 </div>
               </div>
               <div class="gifts-footer-text">
@@ -161,8 +291,33 @@
             </div>
           </div>
         </main>
+        <div class="logo-wrapper">
+          <div class="logo"></div>
+        </div>
       </div>
-      <footer></footer>
+      <footer>
+        <div class="footer-container">
+          <div class="social-media-links">
+            <a href="" class="facebook"></a>
+            <a href="" class="instagram"></a>
+            <a href="" class="youtube"></a>
+            <a href="" class="pinterest"></a>
+            <a href="" class="twitter"></a>
+            <a href="" class="blog"></a>
+          </div>
+          <div class="footer-nav">
+            <a href="">Forum</a>
+            <a href="">How to play</a>
+            <a href="">Contact Us</a>
+            <a href="">Terms & Conditions</a>
+            <a href="">Privacy Policy</a>
+          </div>
+          <div class="footer-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur, porro.
+          </div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
